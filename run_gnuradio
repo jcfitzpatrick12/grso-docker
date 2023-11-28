@@ -1,0 +1,11 @@
+#grant docker permission to connect with the xserver.
+xhost +local:docker
+
+#run the container
+docker run -it \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    --volume /dev/shm:/dev/shm -p 8073:8073 \
+    grim bash
+    
+

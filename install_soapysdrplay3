@@ -1,0 +1,12 @@
+git clone https://github.com/pothosware/SoapySDRPlay3
+
+cd SoapySDRPlay3
+
+mkdir build
+
+cd build
+
+cmake -G Ninja -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DLIB_SUFFIX="" ..      
+
+cmake --build .
+cmake --build . --target install
