@@ -34,7 +34,7 @@ This command builds the Docker image and tags it as `grim`.
 4. **Run the Container**:
 Once the image is built, run the container with:
 
-``` docker run --name gbo-container gbo-docker ```
+``` bash run_grim ```
 
 
 ## Usage
