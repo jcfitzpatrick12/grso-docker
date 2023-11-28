@@ -16,28 +16,25 @@ Before installing `gbo-docker`, ensure Docker is installed on your system. Docke
 
 1. **Clone the Repository**:
    Begin by cloning the `gbo-docker` repository to your local machine:
-```bash
-git clone https://github.com/jcfitzpatrick12/gbo-docker.git
+   
+``` git clone https://github.com/jcfitzpatrick12/gbo-docker.git ```
 
 2. **Navigate to the Repository Directory**:
 Change into the directory of the cloned repository:
 
-```bash
-cd gbo-docker
+``` cd gbo-docker ```
 
 3. **Build the Docker Image**:
 Build the Docker image using the following command:
 
-```bash
-docker build -t grim .
+``` docker build -t grim . ```
 
 This command builds the Docker image and tags it as `grim`.
 
 4. **Run the Container**:
 Once the image is built, run the container with:
 
-```bash
-docker run --name gbo-container gbo-docker
+``` docker run --name gbo-container gbo-docker ```
 
 
 ## Usage
