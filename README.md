@@ -10,8 +10,8 @@
 - **Conda Environment**: Enhances package management and ease of setup.
 
 ## Prerequisites
-Before installing `gbo-docker`, ensure Docker is installed on your system. Docker can be downloaded and installed from [Docker's official website](https://docs.docker.com/get-docker/).
-It is also necessary that the SDRplay API is installed on your host system (https://www.sdrplay.com/api/). Short bash script to automate this to come.
+- Before installing `gbo-docker`, ensure Docker is installed on your system. Docker can be downloaded and installed from [Docker's official website](https://docs.docker.com/get-docker/).
+- It is also necessary that the SDRplay API is installed on your host system (https://www.sdrplay.com/api/). Short bash script to automate this to come.
 
 ## Installation
 
