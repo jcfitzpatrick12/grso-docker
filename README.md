@@ -8,10 +8,17 @@
 - **Conda Environment**: Minimizes dependency conflicts and ease of setup.
 - **Mounted Volume**: Persistent storage in the /home directory inside the container using a mounted volume.
 
+## Supported Operating Systems
+
+This project is designed to be compatible with the following operating systems:
+
+- Ubuntu (Version X.X or later)
+
+Please note that while this project has been tested extensively on Ubuntu, it may also work on other Linux distributions. However, full compatibility is not guaranteed for operating systems other than the ones listed above.
+
 ## Prerequisites
-- Ubuntu.
-- Before installing `gbo-docker`, ensure Docker is installed on your system. Docker can be downloaded and installed from [Docker's official website](https://docs.docker.com/get-docker/).
-- Ensure you have git and wget installed locally.
+- Ensure Docker is installed on your system. Docker can be downloaded and installed from [Docker's official website](https://docs.docker.com/get-docker/).
+- Ensure you have git and wget installed locally [run](```sudo apt install git wget```)
 
 ## Installation
 
