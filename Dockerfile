@@ -24,13 +24,13 @@ ENV PATH="/miniconda/bin:${PATH}"
 WORKDIR /tmp
 
 # Copy expect script into image [auto accepts the licence agreement]
-COPY ./environments.yml ./environments.yml
+COPY ./environment.yml ./environment.yml
 
 # Create the Conda environment from the environment.yml file
 RUN conda env create -f environment.yml
 
 #remove the file 
-rm environments.yml
+RUN rm environment.yml
 
 # Initialize Conda for bash shell
 RUN conda init bash
@@ -40,6 +40,9 @@ RUN echo "source activate gbo-env" >> ~/.bashrc
 
 # Update PATH (optional if you plan to use 'conda run')
 ENV PATH /opt/conda/envs/gbo-env/bin:$PATH
+
+# Set PYTHONPATH to include /home/gnuradio_burst_observer
+ENV PYTHONPATH="/home/gnuradio_burst_observer:${PYTHONPATH}"
 
 #### INSTALL THE SDRPLAY OOT MODULE FOR GNURADIO ####	
 
@@ -65,11 +68,11 @@ COPY ./install_soapysdrplay3 ./install_soapysdrplay3
 # Make the script executable
 RUN chmod +x ./install_soapysdrplay3
 
-#clean up
-RUN rm install_soapysdrplay3
-
 # Clone the repository
 RUN /bin/bash -c "source activate gbo-env && ./install_soapysdrplay3"
+
+#clean up
+RUN rm install_soapysdrplay3
 
 
 WORKDIR /home
