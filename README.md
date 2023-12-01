@@ -51,7 +51,7 @@ This command builds the Docker image and tags it as `grim`.
 5. **Run the Container**:
 Once the image is built, run the container with:
 
-``` bash run_grim ```
+``` bash run_grim.sh ```
 
 6. **Clone the ```gnuradio_burst_observer``` Repository [optional]**:
 Now inside the container, clone the ```gnuradio_burst_observer``` repository:
