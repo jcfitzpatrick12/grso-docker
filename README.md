@@ -1,7 +1,7 @@
 # gbo-docker
 
 ## Introduction
-**gbo-docker** is a containerised environment designed for running the gnuradio_burst_observer application (https://github.com/jcfitzpatrick12/gnuradio_burst_observer). This setup utilizes an Ubuntu-based Docker container, encapsulating GNU Radio and the SoapySDRplay3 plugin within a controlled Conda environment. This approach ensures a consistent, isolated, and portable environment for the application, facilitating easier management and deployment. 
+```gbo-docker``` is a containerised environment designed for running the gnuradio_burst_observer application (https://github.com/jcfitzpatrick12/gnuradio_burst_observer). This setup utilizes an Ubuntu-based Docker container, encapsulating GNU Radio and the SoapySDRplay3 plugin within a controlled Conda environment. This approach ensures a consistent, isolated, and portable environment for the application, facilitating easier management and deployment. 
 
 ## Features
 - **Containerized Environment**: Simplifies deployment and management.
