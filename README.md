@@ -22,7 +22,7 @@ It may also work on other Linux distributions and other Ubuntu versions. However
 
 ## Installation
 
-2. **Install the SDRplay 3.x Linux API locally**:
+1. **Install the SDRplay 3.x Linux API locally**:
 Run the following command to install the API:
 
 ```wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run``` [in your preferred directory]
