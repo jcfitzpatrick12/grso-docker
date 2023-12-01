@@ -27,6 +27,7 @@ Download the SDRPlay 3.x Linux API.
 ```wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run``` [in your preferred directory]
 
 Make the file executable and run it.
+
 ```chmod +x ./SDRplay_RSP_API-Linux-3.07.1.run && ./SDRplay_RSP_API-Linux-3.07.1.run```
 
 4. **Navigate to the Repository Directory**:
