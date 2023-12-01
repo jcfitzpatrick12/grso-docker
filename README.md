@@ -53,8 +53,8 @@ Once the image is built, run the container with:
 
 ``` bash run_grim ```
 
-6. **Clone the Repository [optional]**:
-Now inside the container, clone the gnuradio_burst_observer repo:
+6. **Clone the ```gnuradio_burst_observer``` Repository [optional]**:
+Now inside the container, clone the ```gnuradio_burst_observer``` repository:
 
 ```git clone https://github.com/jcfitzpatrick12/gnuradio_burst_observer.git```
 
