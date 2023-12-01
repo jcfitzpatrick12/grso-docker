@@ -1,2 +1,0 @@
-# Set PYTHONPATH to include /home/gnuradio_burst_observer
-#ENV PYTHONPATH="/home/gnuradio_burst_observer:${PYTHONPATH}"
