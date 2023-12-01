@@ -5,9 +5,7 @@
 
 ## Features
 - **Containerized Environment**: Simplifies deployment and management.
-- **Isolated GNU Radio and SoapySDRplay3 Plugin**: Minimizes dependency conflicts.
-- **Ubuntu-Based Container**: Provides a stable and familiar Linux environment.
-- **Conda Environment**: Enhances package management and ease of setup.
+- **Conda Environment**: Minimizes dependency conflicts and ease of setup.
 - **Mounted Volume**: Persistent storage in the /home directory inside the container using a mounted volume.
 
 ## Prerequisites
