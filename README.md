@@ -10,11 +10,11 @@
 
 ## Supported Operating Systems
 
-This project is designed to be compatible with the following operating systems:
+This project is tested to be compatible with the following operating systems:
 
-- Ubuntu (Version X.X or later)
+- Ubuntu 22.04.3
 
-Please note that while this project has been tested extensively on Ubuntu, it may also work on other Linux distributions. However, full compatibility is not guaranteed for operating systems other than the ones listed above.
+It may also work on other Linux distributions and other Ubuntu versions. However, full compatibility is not guaranteed for operating systems other than the ones listed above.
 
 ## Prerequisites
 - Ensure Docker is installed on your system. Docker can be downloaded and installed from [Docker's official website](https://docs.docker.com/get-docker/).
