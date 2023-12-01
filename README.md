@@ -6,7 +6,7 @@
 ## Features
 - **Containerized Environment**: Simplifies deployment and management.
 - **Conda Environment**: Minimizes dependency conflicts and ease of setup.
-- **Mounted Volume**: Persistent storage in the /home directory inside the container using a mounted volume.
+- **Mounted Volume**: Persistent storage in the ```/home``` directory inside the container using a mounted volume.
 
 ## Supported Operating Systems
 
