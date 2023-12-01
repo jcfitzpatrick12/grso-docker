@@ -18,7 +18,7 @@ Please note that while this project has been tested extensively on Ubuntu, it ma
 
 ## Prerequisites
 - Ensure Docker is installed on your system. Docker can be downloaded and installed from [Docker's official website](https://docs.docker.com/get-docker/).
-- Ensure you have git and wget installed locally by running ```sudo apt install git wget```
+- Ensure you have git and wget installed locally by running ```sudo apt install git wget```.
 
 ## Installation
 
