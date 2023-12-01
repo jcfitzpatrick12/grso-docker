@@ -21,7 +21,7 @@ Begin by cloning the `gbo-docker` repository to your local machine:
    
 ``` git clone https://github.com/jcfitzpatrick12/gbo-docker.git ```
 
-2. **Install the SDRplay 3.x Linux API**:
+2. **Install the SDRplay 3.x Linux API locally**:
 Download the SDRPlay 3.x Linux API.
 
 ```wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run``` [in your preferred directory]
