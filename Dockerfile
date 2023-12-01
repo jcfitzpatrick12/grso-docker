@@ -44,35 +44,39 @@ ENV PATH /opt/conda/envs/gbo-env/bin:$PATH
 # Set PYTHONPATH to include /home/gnuradio_burst_observer
 ENV PYTHONPATH="/home/gnuradio_burst_observer:${PYTHONPATH}"
 
+#Set GBOPARENTPATH as the parent directory of the package
+ENV GBOPARENTPATH /home/gnuradio_burst_observer
+
+
 #### INSTALL THE SDRPLAY OOT MODULE FOR GNURADIO ####	
 
 #change the working directory to where the API is
 WORKDIR /tmp/sdrplay_api-3.07.1
 
 # Copy expect script into image [auto accepts the licence agreement]
-COPY ./install_RSP_API ./install_RSP_API
+COPY ./install_RSP_API.sh ./install_RSP_API.sh
 
 # Make the script executable, and run it
-RUN chmod +x ./install_RSP_API && \
-	./install_RSP_API
+RUN chmod +x ./install_RSP_API.sh && \
+	./install_RSP_API.sh
 	
 #clean up
-RUN rm install_RSP_API
+RUN rm install_RSP_API.sh
 	
 #change the working directory to where the API is
 WORKDIR /tmp
 
 # Copy expect script into image [auto accepts the licence agreement]
-COPY ./install_soapysdrplay3 ./install_soapysdrplay3
+COPY ./install_soapysdrplay3.sh ./install_soapysdrplay3.sh
 
 # Make the script executable
-RUN chmod +x ./install_soapysdrplay3
+RUN chmod +x ./install_soapysdrplay3.sh
 
 # Clone the repository
-RUN /bin/bash -c "source activate gbo-env && ./install_soapysdrplay3"
+RUN /bin/bash -c "source activate gbo-env && ./install_soapysdrplay3.sh"
 
 #clean up
-RUN rm install_soapysdrplay3
+RUN rm install_soapysdrplay3.sh
 
 
 WORKDIR /home

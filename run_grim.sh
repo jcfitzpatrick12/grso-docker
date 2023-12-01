@@ -7,6 +7,7 @@ docker volume create gbo-vol
 docker run --name grim-container \
     --mount type=volume,src=gbo-vol,target=/home \
     -it \
+    --rm \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     --volume /dev/shm:/dev/shm \
