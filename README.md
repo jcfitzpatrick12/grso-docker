@@ -11,6 +11,7 @@
 - **Mounted Volume**: Persistent storage in the /home directory inside the container using a mounted volume.
 
 ## Prerequisites
+- Ubuntu.
 - Before installing `gbo-docker`, ensure Docker is installed on your system. Docker can be downloaded and installed from [Docker's official website](https://docs.docker.com/get-docker/).
 - Ensure you have git and wget installed locally.
 
@@ -58,6 +59,9 @@ After installation, run ```gnuradio-companion``` to access gnuradio-companion.
 
 ## Contributing
 Contributions to `gbo-docker` are welcome. If you have suggestions or improvements, please open an issue or submit a pull request on the GitHub repository.
+
+## Improvements to Come
+- Support for Raspberry Pi.
 
 ## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
