@@ -1,5 +1,5 @@
 # Use an Ubuntu image
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 # Setting environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -72,12 +72,11 @@ COPY ./install_soapysdrplay3.sh ./install_soapysdrplay3.sh
 # Make the script executable
 RUN chmod +x ./install_soapysdrplay3.sh
 
-# Clone the repository
+# Run the installation script
 RUN /bin/bash -c "source activate gbo-env && ./install_soapysdrplay3.sh"
 
 #clean up
 RUN rm install_soapysdrplay3.sh
-
 
 WORKDIR /home
 
