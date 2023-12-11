@@ -8,6 +8,7 @@ ENV DISPLAY=:0
 #Set GBOPARENTPATH as the parent directory of the package
 ENV GBOPARENTPATH /home/grso
 
+#add grso to the python path so we can import modules properly
 ENV PYTHONPATH "${PYTHONPATH}:/home/grso"
 
 #### INSTALLING RELEVANT PACKAGES ###
@@ -56,7 +57,6 @@ COPY ./file_mover.sh ./file_mover.sh
 RUN chmod +x ./file_mover.sh && ./file_mover.sh
 
 #### INSTALLING GRSO APPLICATION ####
-
 WORKDIR /home
 
 # clone the grso repo [gnuradio for solar observations] and pip install the required packages
