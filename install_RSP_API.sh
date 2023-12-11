@@ -18,6 +18,9 @@ expect {
         send "y\r"
     }
     
+    -regex "identification in applications such as lsusb?" {
+        send "y\r"
+    }
     eof { 
         send_user "Reached end of file\n"
     }
