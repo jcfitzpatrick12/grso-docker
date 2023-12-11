@@ -18,6 +18,9 @@ RUN apt-get update -y && \
     apt-get install -y wget sudo bash libgtk-3-dev x11-apps expect git swig cmake gnuradio python3-pip
 
 
+
+#### INSTALLING THE RSP API ####
+
 # Change the directory to tmp
 WORKDIR /tmp
 
@@ -32,6 +35,8 @@ RUN wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run && \
 #clean up
 RUN rm install_RSP_API.sh
 
+#### INSTALLING THE gr-sdrplay3 OOT MODULE ####
+
 # Now copy the script which will install fventuri's gr-sdrplay3 OOT module
 COPY ./install_gr_sdrplay3.sh ./install_gr_sdrplay3.sh
 
@@ -41,6 +46,8 @@ RUN chmod +x ./install_gr_sdrplay3.sh && ./install_gr_sdrplay3.sh
 #clean up
 RUN rm install_gr_sdrplay3.sh
 
+
+#### FIXING A KNOWN BUG WITH gr-sdrplay3 OOT MODULE ON UBUNTU ####
 WORKDIR /tmp
 
 #Perform the file moving correction [known bug for gr-sdrplay3 installations on ubuntu]
@@ -48,7 +55,7 @@ COPY ./file_mover.sh ./file_mover.sh
 
 RUN chmod +x ./file_mover.sh && ./file_mover.sh
 
-RUN echo ""
+#### INSTALLING GRSO APPLICATION ####
 
 WORKDIR /home
 
