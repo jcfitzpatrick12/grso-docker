@@ -60,6 +60,8 @@ WORKDIR /home
 # clone the grso repo [gnuradio for solar observations] and pip install the required packages
 RUN git clone https://github.com/jcfitzpatrick12/grso.git && \
 	cd grso && \
+	mkdir data && \
+	mkdir temp_data && \
 	pip install -r requirements.txt
 
 #### AUTOMATING CRON JOBS STARTING #####
