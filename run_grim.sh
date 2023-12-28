@@ -11,4 +11,4 @@ docker run --name grim-container \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     --volume /dev/shm:/dev/shm \
-    grim bash
+    grim 

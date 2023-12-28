@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV DISPLAY=:0
 
 #Set GBOPARENTPATH as the parent directory of the package
-ENV GBOPARENTPATH /home/grso
+ENV GRSOPARENTPATH /home/grso
 
 #add grso to the python path so we can import modules properly
 ENV PYTHONPATH "${PYTHONPATH}:/home/grso"
@@ -16,8 +16,7 @@ ENV PYTHONPATH "${PYTHONPATH}:/home/grso"
 # Run the barebones stuff to install gnuradio and to get the GUI up and running
 # wget for downloading the API, udev, libudev-dev, sudo
 RUN apt-get update -y && \
-    apt-get install -y wget sudo bash libgtk-3-dev x11-apps expect git swig cmake gnuradio python3-pip
-
+    apt-get install -y wget sudo bash libgtk-3-dev x11-apps expect git swig cmake gnuradio python3-pip cron nano
 
 
 #### INSTALLING THE RSP API ####
@@ -63,11 +62,32 @@ WORKDIR /home
 RUN git clone https://github.com/jcfitzpatrick12/grso.git && \
 	cd grso && \
 	pip install -r requirements.txt
-	
-	
-#ready to go!
+
+#### AUTOMATING CRON JOBS STARTING #####
+WORKDIR /tmp
+
+# Copy your cron job file into the container
+COPY ./grso_cron_jobs /etc/cron.d/grso_cron_jobs
+
+# Set appropriate permissions [read and write for you, other users can only read]
+RUN chmod 0644 /etc/cron.d/grso_cron_jobs
+
+#run the custom cron jobs [i.e. add the custom cron jobs to crontab]
+RUN crontab /etc/cron.d/grso_cron_jobs
+
+##### Initiate some scripts to run on start up of the container
+
+# Copy the start script into the container
+COPY ./start.sh ./start.sh
+
+# Give execution rights on the start script
+RUN chmod +x ./start.sh
+
+#set the workdir to be home, and initiate the startup script
 WORKDIR /home
-	
+
+# Run the start script as the default command
+CMD ["/tmp/start.sh"]
 
 
 
