@@ -1,0 +1,13 @@
+#Set GBOPARENTPATH as the parent directory of the package
+
+
+# m h  dom mon dow   command
+#daily observations
+45 8 * * * GRSOPARENTPATH=/home/grso bash /home/grso/fMonitor/monitor.sh 600 59
+#nightly test
+00 22 * * * GRSOPARENTPATH=/home/grso bash /home/grso/fMonitor/monitor.sh 1 59
+
+#run every minute
+* * * * * echo "Cron tells us the current date is: $(date)" > /home/is_cron_running 
+
+
