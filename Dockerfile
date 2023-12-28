@@ -13,8 +13,7 @@ ENV PYTHONPATH "${PYTHONPATH}:/home/grso"
 
 #### INSTALLING RELEVANT PACKAGES ###
 
-# Run the barebones stuff to install gnuradio and to get the GUI up and running
-# wget for downloading the API, udev, libudev-dev, sudo
+# Install the required packages for the installation
 RUN apt-get update -y && \
     apt-get install -y wget sudo bash libgtk-3-dev x11-apps expect git swig cmake gnuradio python3-pip cron nano
 
