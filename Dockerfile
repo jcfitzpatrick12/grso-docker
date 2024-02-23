@@ -27,9 +27,10 @@ WORKDIR /tmp
 COPY ./install_RSP_API.sh ./install_RSP_API.sh
 
 #download the installation file and run the installation using the above copied script
-RUN wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run && \
+#RUN wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run && \
+RUN wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.14.0.run && \
 	chmod +x ./install_RSP_API.sh && \
-	./install_RSP_API.sh
+	./install_RSP_API.sh 
 	
 #clean up
 RUN rm install_RSP_API.sh
