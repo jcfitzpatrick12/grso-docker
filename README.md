@@ -24,11 +24,11 @@ It may also work on other Linux distributions and other Ubuntu versions. However
 1. **Install the SDRplay 3.x Linux API locally**:
 Run the following command to install the API:
 
-```wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run``` [in your preferred directory]
+```wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.14.0.run``` [in your preferred directory]
 
 Make the file executable and run it.
 
-```chmod +x ./SDRplay_RSP_API-Linux-3.07.1.run && ./SDRplay_RSP_API-Linux-3.07.1.run```
+```chmod +x ./SDRplay_RSP_API-Linux-3.14.0.run && ./SDRplay_RSP_API-Linux-3.14.0.run```
 
 2. **Clone the ```grso-docker``` Repository**:
 Begin by cloning the `grso-docker` repository to your local machine:
