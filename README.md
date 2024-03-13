@@ -1,5 +1,12 @@
 # grso-docker: GNU Radio for Solar Observations
 
+## Important Announcement :loudspeaker:
+
+**This repository (grso) is no longer under active development. Development efforts have shifted to a new and improved program named SPECTRE.**
+
+**For the latest updates, features, and contributions, please refer to the new SPECTRE project. The link to the new project will be provided here shortly.**
+
+
 ## Introduction
 ```grso-docker``` is a containerised environment designed for running the ```grso``` application [linked here](https://github.com/jcfitzpatrick12/grso). This setup utilizes an Ubuntu-based Docker container to run GNU Radio with the ```gr-sdrplay3``` OOT module. This approach ensures a consistent, isolated, and portable environment for the ```grso``` application, facilitating consistent deployment and easier management. 
 
